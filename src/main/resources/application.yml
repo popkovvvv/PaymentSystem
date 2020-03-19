@@ -1,0 +1,25 @@
+#configs auto configs
+server:
+  port: 80
+  jetty:
+    acceptors: -1
+    selectors: -1
+
+spring:
+  profiles:
+    active: dev
+  jpa:
+    open-in-view: true
+    properties:
+      hibernate:
+        ddl-auto: update
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+      show-sql: true
+    generate-ddl: true
+
+application:
+  qiwiSecretKey: eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6ImNqYXhyNy0wMCIsInVzZXJfaWQiOiI3OTU4ODAyNDg0OSIsInNlY3JldCI6IjAxYmVkZTdlMGM1NjQyMmQxNTBmNTQwMjJlZTM1MzZmNjY3ZTQ2NzY1NDdkNmY0ODNhMjExNGQzZmFhMjg3NDYifX0=
+  qiwiKey: 48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPpZyRrUTjcFVVFw6WDXFFc2mZCqyhBg8P3vepGDTb5QzCYaSHFfjQc94MK37YehhW94LzQHi1yxXNqTFhgAht5Joz2zTAVgjXvnQsHGDTK
