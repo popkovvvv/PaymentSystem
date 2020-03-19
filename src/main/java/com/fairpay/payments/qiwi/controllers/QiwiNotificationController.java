@@ -26,10 +26,8 @@ public class QiwiNotificationController {
     private final ApplicationEventPublisher eventPublisher;
 
 
-
-
     @PostMapping
-        public ResponseEntity<?> getNotificationByBillStatus(@RequestBody  QiwiResponse qiwiResponse, HttpServletRequest request) {
+    public ResponseEntity<?> getNotificationByBillStatus(@RequestBody  QiwiResponse qiwiResponse, HttpServletRequest request) {
         if(log.isDebugEnabled()) {
             log.debug("received payment confirmation", qiwiResponse);
         }
@@ -42,6 +40,5 @@ public class QiwiNotificationController {
         }
         return ResponseEntity.ok(new ResponseQiwi("0"));
     }
-
 
 }
